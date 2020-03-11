@@ -29,6 +29,8 @@ or for commonJS
 
 ## ServiceEndpoint
 
+This class overrides `successResponse` and `errorResponse` from the `GenericHandler` parent class to return a JSON response that is compatible with http/https (ie for AWS Lambda)
+
 ## PublicEndpoint
 
 Under Construction - Will be used to setup public endpoints
