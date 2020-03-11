@@ -1,0 +1,1 @@
+Add your src files here. This does not end up in the final npm package. These sources will be compiled and added to the lib file when publishing to npm
