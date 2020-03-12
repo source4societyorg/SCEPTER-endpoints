@@ -1,3 +1,4 @@
+
 const GenericHandler = require('@source4society/scepter-handlerutilities-lib')
 
 class ServiceEndpoint extends GenericHandler {
@@ -32,4 +33,10 @@ class ServiceEndpoint extends GenericHandler {
   }
 }
 
-module.exports = ServiceEndpoint
+class PublicEndpoint extends ServiceEndpoint {}
+
+class PrivateEndpoint extends ServiceEndpoint {}
+
+module.exports.ServiceEndpoint = ServiceEndpoint
+module.exports.PrivateEndpoint = PrivateEndpoint
+module.exports.PublicEndpoint = PublicEndpoint

@@ -1,4 +1,19 @@
-const ServiceEndpoint = require('../src/ServiceEndpoint')
+const endpoints = require('../src/index')
+const { PrivateEndpoint, PublicEndpoint, ServiceEndpoint } = endpoints
+
+describe('PrivateEndpoint', () => {
+  it('should not do anything because it is under construction', (done) => {
+    const myEndpoint = new PrivateEndpoint('', '', done)
+    myEndpoint.successResponse({}, {}, 200)
+  })
+})
+
+describe('PublicEndpoint', () => {
+  it('should not do anything because it is under construction', (done) => {
+    const myEndpoint = new PublicEndpoint('', '', done)
+    myEndpoint.successResponse({}, {}, 200)
+  })
+})
 
 describe('ServiceEndpoint', () => {
   it('should trigger the handler callback with success when successResponse is called', (done) => {
